@@ -5,3 +5,4 @@
 Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
 
 <a href="https://codeclimate.com/github/efterpe/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+ https://github.com/efterpe/frontend-project-lvl1/actions/actions/workflows/<lint.yml>/badge.svg
