@@ -8,7 +8,7 @@ env:
   es2020: true
 
 extends:
-  - 'airbnb-base'
+  - 'airbnb'
   - 'plugin:jest/recommended'
 
 parserOptions:
@@ -18,4 +18,4 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  
