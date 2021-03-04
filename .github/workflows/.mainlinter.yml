@@ -1,0 +1,21 @@
+# Name of workflow
+name: Main-Linter
+
+# Trigger the workflow on push or pull request
+on:
+  - push
+  - pull_request
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run linter
+        uses: ../node_modules/eslint-config-airbnb-base
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            with:
+          coverageCommand: make linе
+          debug: true
