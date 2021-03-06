@@ -1,17 +1,17 @@
 # Name of workflow
-name: Main-Linter
+name: linter
 
 # Trigger the workflow on push or pull request
 on:
   - push
  
-
 jobs:
    make-lint:
+   name: Run Linter
    runs-on: ubuntu-latest
     steps:
        -name: Chechout
-       uses: action/checkout@v2
+        uses: action/checkout@v2
 
-       -name: runt lint
-       run: make lint
+       -name: run linter
+        run: make lint
