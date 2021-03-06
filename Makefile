@@ -1,4 +1,4 @@
 install: npm install
 brain-games: node bin/brain-games.js
 publish: npm publish --dry-run
-make lint: npx eslint ..eslintrc.yml
+make lint: npx eslint eslintrc.yml
