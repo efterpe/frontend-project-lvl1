@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import { name } from '../src/cli.js'
+import {hello} from '../bin/brain-games.js'
 
  
 
@@ -26,7 +27,9 @@ export const check = (question, answer) => {
     }
 };
 
-const even = () => {
+export const even = () => {
+hello();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let numbers = CreateRandom();  
   for(let number of numbers) {
     console.log('Question: ' + number);
@@ -36,9 +39,4 @@ const even = () => {
       } 
       console.log('Congratulations, ' + name);
      }
-}; 
-export default even();
-
- 
-
-
+};
