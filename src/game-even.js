@@ -4,15 +4,19 @@ import {hello} from '../bin/brain-games.js'
 
  
 
- export const CreateRandom = () => {
+export const CreateRandom = () => {
     let arr = [];
     for (let i = 0; i < 3; i +=1) {
-      arr[i] = Math.floor(Math.random() * 10);
+      arr[i] = Random(10);
     }
     return arr;
   };
- 
 
+export const Random = (n) => {
+  return Math.floor(Math.random() * n);
+};
+
+ 
 export const isEven = (num) => { return num % 2 === 0 ? 'yes' : 'no' ;}
 
 
