@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { name } from '../src/cli.js'
-import {hello} from '../bin/brain-games.js'
-import { CreateRandom, Random, check } from './game-even.js'
+import {hello, check } from './index.js'
+import {Random} from './game-even.js'
 
 export const isCalc = (number1, number2, operation) => {
     if (operation === '+') {
@@ -18,17 +18,23 @@ export const isCalc = (number1, number2, operation) => {
 export const calc = () => {
   hello();
   console.log('What is the result of the expression?');
-  let numbers1 = CreateRandom();  
-  let numbers2 = CreateRandom();  
+  let round = 0;
+  while (round < 3) {
+  let number1 = Random(3);  
+  let number2 = Random(3);  
   let  operations = ['+', '-', '*'];
-  for(const i = 0; i < numbers1.length; i += 1) {
-    let j = Random(3);
-    console.log('Question: ' + numbers1[i] + ' ' + operations[j] +  ' ' + numbers2[i]);
+  let j = Random(3);
+  console.log('Question: ' + number1 + ' ' + operations[j] +  ' ' + number2);
     let useranswer = readlineSync.question('Your answer: ');
-    if ((check(isCalc( numbers1[i], numbers2[i], operations[j]) , Number(useranswer))) ===  false) {
+    if ((check(isCalc( number1, number2, operations[j]) , Number(useranswer))) ===  false) {
         break;
-        } 
-        console.log('Congratulations, ' + name);
+        } else {
+            round += 1;
         }
+    }
+       if (round ===3) {
+        console.log('Congratulations, ' + name);
+       }
+    
     };
     
