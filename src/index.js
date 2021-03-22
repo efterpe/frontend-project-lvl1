@@ -18,3 +18,6 @@ export const check = (question, answer) => {
      return false;
     }
 };
+export const Random = (n) => {
+    return Math.floor(Math.random() * n);
+  };

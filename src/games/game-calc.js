@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { name } from '../src/cli.js'
-import {hello, check } from './index.js'
-import {Random} from './game-even.js'
+import { name } from '../cli.js'
+import {hello, check, Random} from '../index.js'
+
 
 export const isCalc = (number1, number2, operation) => {
     if (operation === '+') {
