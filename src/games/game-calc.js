@@ -20,8 +20,8 @@ export const calc = () => {
   console.log('What is the result of the expression?');
   let round = 0;
   while (round < 3) {
-  let number1 = Random(3);  
-  let number2 = Random(3);  
+  let number1 = Random(10);  
+  let number2 = Random(10);  
   let  operations = ['+', '-', '*'];
   let j = Random(3);
   console.log('Question: ' + number1 + ' ' + operations[j] +  ' ' + number2);

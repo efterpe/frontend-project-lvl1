@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 import { name } from '../cli.js'
 import {hello, check, Random} from '../index.js'
 
- 
-
 export const CreateRandom = (m, n) => {
     let arr = [];
     for (let i = 0; i < m; i +=1) {
@@ -12,10 +10,8 @@ export const CreateRandom = (m, n) => {
     return arr;
   };
 
-
  
 export const isEven = (num) => { return num % 2 === 0 ? 'yes' : 'no' ;}
-
 
 
 export const even = () => {

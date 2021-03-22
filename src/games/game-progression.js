@@ -10,7 +10,7 @@ export const progression = () => {
     let round = 0;
     while (round < 3) {
     let firstnumber = Random(10);  
-    let step = Random(10);
+    let step = Random(10)+1;
     let hide = Random(9) 
     let numbers = [firstnumber];
     let n = 0;
@@ -20,6 +20,7 @@ export const progression = () => {
     }
     let rightanswer = numbers[hide];
     numbers[hide] = '..'
+    numbers = numbers.join(' ');
     console.log('Question: ' + numbers);
       let useranswer = readlineSync.question('Your answer: ');
       if ((check(rightanswer, Number(useranswer))) ===  false) {
