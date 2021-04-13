@@ -1,34 +1,25 @@
-import readlineSync from 'readline-sync';
-import { name } from '../cli.js';
-import { hello, check, Random } from '../index.js';
+import engine from '../index.js';
+import Random from '../Random.js';
 
-export const isGcd = (number1, number2) => {
-  while (number1 !== 0 && number2 !== 0) {
-    if (number1 > number2) {
-      number1 %= number2;
-    } else {
-      number2 %= number1;
+const gcd = () => {
+  const isGcd = (numb1, numb2) => {
+    while (numb1 !== 0 && numb2 !== 0) {
+      if (numb1 > numb2) {
+        numb1 %= numb2;
+      } else {
+        numb2 %= numb1;
+      }
     }
-  }
-  return number2 + number1;
+    return numb2 + numb1;
+  };
+  const condition = 'Find the greatest common divisor of given numbers.';
+  const GameData = () => {
+    const number1 = Random(10);
+    const number2 = Random(10);
+    const question = `${number1} ${number2}`;
+    const answer = isGcd(number1, number2);
+    return [answer, question];
+  };
+  engine(condition, GameData);
 };
-
-export const gcd = () => {
-  hello();
-  console.log('Find the greatest common divisor of given numbers.');
-  let round = 0;
-  while (round < 3) {
-    const number1 = Random(100);
-    const number2 = Random(100);
-    console.log(`Question: ${number1} ${number2}`);
-    const useranswer = readlineSync.question('Your answer: ');
-    if ((check(isGcd(number1, number2), Number(useranswer))) === false) {
-      break;
-    } else {
-      round += 1;
-    }
-  }
-  if (round === 3) {
-    console.log(`Congratulations, ${name}`);
-  }
-};
+export default gcd;

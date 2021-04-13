@@ -1,32 +1,25 @@
-import readlineSync from 'readline-sync';
-import { name } from '../cli.js';
-import { hello, check, Random } from '../index.js';
+import engine from '../index.js';
+import Random from '../Random.js';
 
-export const isPrime = (number) => {
-  let answer = 'yes';
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) {
-      answer = 'no';
+const prime = () => {
+  const isPrime = (number) => {
+    let answer = 'yes';
+    for (let i = 2; i < number; i += 1) {
+      if (number % i === 0) {
+        answer = 'no';
+      }
     }
-  }
-  return answer;
-};
+    return answer;
+  };
+  const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const prime = () => {
-  hello();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  let round = 0;
-  while (round < 3) {
-    const number = Random(100) + 1;
-    console.log(`Question: ${number}`);
-    const useranswer = readlineSync.question('Your answer: ');
-    if ((check(isPrime(number), useranswer)) === false) {
-      break;
-    } else {
-      round += 1;
-    }
-  }
-  if (round === 3) {
-    console.log(`Congratulations, ${name}`);
-  }
+  const GameData = () => {
+    const number = Random(10);
+    const question = number;
+    const answer = isPrime(number);
+    return [answer, question];
+  };
+
+  engine(condition, GameData);
 };
+export default prime;
