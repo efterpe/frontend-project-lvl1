@@ -25,6 +25,6 @@ export default function engine(condition, task) {
   }
 
   if (round === 3) {
-    console.log(`Hello, ${name}!`);
+    console.log(`Congratulations, ${name}!`);
   }
 }
