@@ -10,5 +10,5 @@ jobs:
     name: Run Linter
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v2
       - run: make lint
