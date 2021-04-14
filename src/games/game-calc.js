@@ -10,6 +10,7 @@ const calc = () => {
     } if (oper === '*') {
       return numb1 * numb2;
     }
+    throw new Error('error');
   };
 
   const condition = 'What is the result of the expression?';
