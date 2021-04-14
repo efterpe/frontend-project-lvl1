@@ -6,12 +6,9 @@ on:
   - push
  
 jobs:
-   make-lint:
-   name: Run Linter
-   runs-on: ubuntu-latest
+  make-lint:
+    name: Run Linter
+    runs-on: ubuntu-latest
     steps:
-       -name: Chechout
-        uses: action/checkout@v2
-
-       -name: run linter
-        run: make lint
+      - uses: action/checkout@v2
+      - run: make lint
