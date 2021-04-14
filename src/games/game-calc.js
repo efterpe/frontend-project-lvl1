@@ -20,7 +20,7 @@ const calc = () => {
     const operations = ['+', '-', '*'];
     const j = Random(3);
     const operation = operations[j];
-    const question = number1 + operation + number2;
+    const question = `${number1} ${operation} ${number2}`;
     const answer = isCalc(number1, number2, operation);
     return [answer, question];
   };
