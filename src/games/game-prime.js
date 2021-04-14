@@ -3,13 +3,15 @@ import Random from '../Random.js';
 
 const prime = () => {
   const isPrime = (number) => {
-    let answer = 'yes';
+    if (number === 1) {
+      return 'yes';
+    }
     for (let i = 2; i < number; i += 1) {
       if (number % i === 0) {
-        answer = 'no';
+        return 'no';
       }
     }
-    return answer;
+    return 'yes';
   };
   const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
