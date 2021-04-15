@@ -14,5 +14,5 @@ brain-progression: install-deps
 	node bin/brain-progression.js
 publish:
 	npm publish --dry-run
-lint:
+lint: install-deps
 	npx eslint .
