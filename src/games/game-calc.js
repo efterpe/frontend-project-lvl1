@@ -22,7 +22,7 @@ const calc = () => {
     const j = Random(3);
     const operation = operations[j];
     const question = `${number1} ${operation} ${number2}`;
-    const answer = isCalc(number1, number2, operation);
+    const answer = String(isCalc(number1, number2, operation));
     return [answer, question];
   };
   engine(condition, GameData);

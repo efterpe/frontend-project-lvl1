@@ -19,7 +19,7 @@ const gcd = () => {
     const number1 = Random(10);
     const number2 = Random(10);
     const question = `${number1} ${number2}`;
-    const answer = isGcd(number1, number2);
+    const answer = String(isGcd(number1, number2));
     return [answer, question];
   };
   engine(condition, GameData);

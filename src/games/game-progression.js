@@ -13,7 +13,7 @@ const progression = () => {
       numbers.push(numbers[n] + step);
       n += 1;
     }
-    const answer = numbers[hide];
+    const answer = String(numbers[hide]);
     numbers[hide] = '..';
     numbers = numbers.join(' ');
     return [answer, numbers];

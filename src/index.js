@@ -14,7 +14,7 @@ export default function engine(condition, task) {
     const generatedQuestion = v[1];
     console.log(`Question: ${generatedQuestion}`);
     const useranswer = readlineSync.question('Your answer:');
-    if (useranswer == generatedAnswer) {
+    if (useranswer === generatedAnswer) {
       console.log('Correct!');
       round += 1;
     } else {
