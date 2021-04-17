@@ -10,8 +10,7 @@ export default function engine(condition, task) {
 
   for (let i = 0; i < 3; i += 1) {
     const v = task();
-    const generatedAnswer = v[0];
-    const generatedQuestion = v[1];
+    const [generatedAnswer, generatedQuestion] = v;
     console.log(`Question: ${generatedQuestion}`);
     const userAnswer = readlineSync.question('Your answer:');
     if (userAnswer === generatedAnswer) {
