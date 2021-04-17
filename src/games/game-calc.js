@@ -1,7 +1,7 @@
 import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
-const isCalc = (numb1, numb2, oper) => {
+const isCalculator = (numb1, numb2, oper) => {
   if (oper === '+') {
     return (numb1 + numb2);
   } if (oper === '-') {
@@ -22,7 +22,7 @@ const calculator = () => {
     const j = generateNumbers(3);
     const operation = operations[j];
     const question = `${number1} ${operation} ${number2}`;
-    const answer = String(isCalc(number1, number2, operation));
+    const answer = String(isCalculator(number1, number2, operation));
     return [answer, question];
   };
   engine(condition, GameData);
