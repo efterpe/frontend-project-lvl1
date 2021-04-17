@@ -1,12 +1,12 @@
 import engine from '../index.js';
-import Random from '../Random.js';
+import generateNumbers from '../generator.js';
 
 const progression = () => {
   const condition = 'What number is missing in the progression?';
   const GameData = () => {
-    const firstnumber = Random(10);
-    const step = Random(10) + 1;
-    const hide = Random(9);
+    const firstnumber = generateNumbers(10);
+    const step = generateNumbers(10) + 1;
+    const hide = generateNumbers(9);
     let numbers = [firstnumber];
     let n = 0;
     while (n < 9) {

@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import Random from '../Random.js';
+import generateNumbers from '../generator.js';
 
 const isCalc = (numb1, numb2, oper) => {
   if (oper === '+') {
@@ -16,10 +16,10 @@ const calculator = () => {
   const condition = 'What is the result of the expression?';
 
   const GameData = () => {
-    const number1 = Random(10);
-    const number2 = Random(10);
+    const number1 = generateNumbers(10);
+    const number2 = generateNumbers(10);
     const operations = ['+', '-', '*'];
-    const j = Random(3);
+    const j = generateNumbers(3);
     const operation = operations[j];
     const question = `${number1} ${operation} ${number2}`;
     const answer = String(isCalc(number1, number2, operation));
