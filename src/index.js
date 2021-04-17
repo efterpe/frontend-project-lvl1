@@ -9,8 +9,8 @@ export default function engine(condition, task) {
   let round = 0;
 
   for (let i = 0; i < 3; i += 1) {
-    const v = task();
-    const [generatedAnswer, generatedQuestion] = v;
+    const getData = task();
+    const [generatedAnswer, generatedQuestion] = getData;
     console.log(`Question: ${generatedQuestion}`);
     const userAnswer = readlineSync.question('Your answer:');
     if (userAnswer === generatedAnswer) {

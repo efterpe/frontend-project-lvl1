@@ -2,16 +2,16 @@ import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
 const isgreatestCommonDivisor = (n1, n2) => {
-  let numb1 = n1;
-  let numb2 = n2;
-  while (numb1 !== 0 && numb2 !== 0) {
-    if (numb1 > numb2) {
-      numb1 %= numb2;
+  let number1 = n1;
+  let number2 = n2;
+  while (number1 !== 0 && number2 !== 0) {
+    if (number1 > number2) {
+      number1 %= number2;
     } else {
-      numb2 %= numb1;
+      number2 %= number1;
     }
   }
-  return (numb2 + numb1);
+  return (number2 + number1);
 };
 const greatestCommonDivisor = () => {
   const condition = 'Find the greatest common divisor of given numbers.';

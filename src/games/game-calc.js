@@ -1,13 +1,13 @@
 import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
-const isCalculator = (numb1, numb2, oper) => {
-  if (oper === '+') {
-    return (numb1 + numb2);
-  } if (oper === '-') {
-    return numb1 - numb2;
-  } if (oper === '*') {
-    return numb1 * numb2;
+const isCalculator = (number1, number2, operation) => {
+  if (operation === '+') {
+    return (number1 + number2);
+  } if (operation === '-') {
+    return number1 - number2;
+  } if (operation === '*') {
+    return number1 * number2;
   }
   throw new Error('error');
 };
