@@ -1,18 +1,18 @@
 import engine from '../index.js';
 import Random from '../Random.js';
 
-const calc = () => {
-  const isCalc = (numb1, numb2, oper) => {
-    if (oper === '+') {
-      return (numb1 + numb2);
-    } if (oper === '-') {
-      return numb1 - numb2;
-    } if (oper === '*') {
-      return numb1 * numb2;
-    }
-    throw new Error('error');
-  };
+const isCalc = (numb1, numb2, oper) => {
+  if (oper === '+') {
+    return (numb1 + numb2);
+  } if (oper === '-') {
+    return numb1 - numb2;
+  } if (oper === '*') {
+    return numb1 * numb2;
+  }
+  throw new Error('error');
+};
 
+const calculator = () => {
   const condition = 'What is the result of the expression?';
 
   const GameData = () => {
@@ -27,4 +27,4 @@ const calc = () => {
   };
   engine(condition, GameData);
 };
-export default calc;
+export default calculator;

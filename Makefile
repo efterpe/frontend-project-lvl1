@@ -1,16 +1,16 @@
 install-deps:
 	npm install
-brain-games: install-deps
+brain-games: 
 	node bin/brain-games.js
-brain-calc: install-deps
+brain-calc: 
 	node bin/brain-calc.js
-brain-even: install-deps
+brain-even: 
 	node bin/brain-even.js
-brain-gcd: install-deps
+brain-gcd: 
 	node bin/brain-gcd.js  
-brain-prime: install-deps
+brain-prime: 
 	node bin/brain-prime.js
-brain-progression: install-deps
+brain-progression:
 	node bin/brain-progression.js
 publish:
 	npm publish --dry-run

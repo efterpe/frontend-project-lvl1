@@ -13,12 +13,12 @@ export default function engine(condition, task) {
     const generatedAnswer = v[0];
     const generatedQuestion = v[1];
     console.log(`Question: ${generatedQuestion}`);
-    const useranswer = readlineSync.question('Your answer:');
-    if (useranswer === generatedAnswer) {
+    const userAnswer = readlineSync.question('Your answer:');
+    if (userAnswer === generatedAnswer) {
       console.log('Correct!');
       round += 1;
     } else {
-      console.log(`${useranswer} is wrong answer ;(. Correct answer was ${generatedAnswer}.`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${generatedAnswer}.`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
