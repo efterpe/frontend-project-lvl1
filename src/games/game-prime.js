@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generator';
+import generateNumbers from '../generator.js';
 
 const isPrime = (number) => {
   if (number < 2) {
