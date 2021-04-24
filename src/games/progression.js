@@ -1,8 +1,8 @@
 import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
+const condition = 'What number is missing in the progression?';
 const progression = () => {
-  const condition = 'What number is missing in the progression?';
   const GameData = () => {
     const firstnumber = generateNumbers(10);
     const step = generateNumbers(10) + 1;

@@ -1,6 +1,7 @@
 import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
+const condition = 'What is the result of the expression?';
 const isCalculator = (number1, number2, operation) => {
   if (operation === '+') {
     return (number1 + number2);
@@ -11,10 +12,7 @@ const isCalculator = (number1, number2, operation) => {
   }
   throw new Error('error');
 };
-
 const calculator = () => {
-  const condition = 'What is the result of the expression?';
-
   const GameData = () => {
     const number1 = generateNumbers(10);
     const number2 = generateNumbers(10);

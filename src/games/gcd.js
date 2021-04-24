@@ -1,6 +1,7 @@
 import engine from '../index.js';
 import generateNumbers from '../generator.js';
 
+const condition = 'Find the greatest common divisor of given numbers.';
 const isgreatestCommonDivisor = (n1, n2) => {
   let number1 = n1;
   let number2 = n2;
@@ -14,7 +15,6 @@ const isgreatestCommonDivisor = (n1, n2) => {
   return (number2 + number1);
 };
 const greatestCommonDivisor = () => {
-  const condition = 'Find the greatest common divisor of given numbers.';
   const GameData = () => {
     const number1 = generateNumbers(10);
     const number2 = generateNumbers(10);
