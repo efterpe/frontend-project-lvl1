@@ -16,7 +16,8 @@ const progression = () => {
     const answer = String(numbers[hide]);
     numbers[hide] = '..';
     numbers = numbers.join(' ');
-    return [answer, numbers];
+    const question = numbers;
+    return [answer, question];
   };
   engine(condition, GameData);
 };
