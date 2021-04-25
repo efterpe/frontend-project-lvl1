@@ -9,7 +9,7 @@ jobs:
   make-lint:
     name: Run Linter
     runs-on: ubuntu-latest
-     strategy:
+    strategy:
       matrix:
         node-version: [16.x]
 
