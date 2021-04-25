@@ -9,6 +9,10 @@ jobs:
   make-lint:
     name: Run Linter
     runs-on: ubuntu-latest
+     strategy:
+      matrix:
+        node-version: [16.x]
+
     steps:
       - uses: actions/checkout@v2
       - run: make install-deps
