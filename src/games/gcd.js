@@ -14,14 +14,13 @@ const checkGreatestCommonDivisor = (n1, n2) => {
   }
   return (number2 + number1);
 };
-const greatestCommonDivisor = () => {
-  const createData = () => {
-    const number1 = generateNumbers(10);
-    const number2 = generateNumbers(10);
-    const question = `${number1} ${number2}`;
-    const answer = String(checkGreatestCommonDivisor(number1, number2));
-    return [answer, question];
-  };
-  engine(condition, createData);
+const createData = () => {
+  const number1 = generateNumbers(10);
+  const number2 = generateNumbers(10);
+  const question = `${number1} ${number2}`;
+  const answer = String(checkGreatestCommonDivisor(number1, number2));
+  return [answer, question];
 };
+const greatestCommonDivisor = () => engine(condition, createData);
+
 export default greatestCommonDivisor;

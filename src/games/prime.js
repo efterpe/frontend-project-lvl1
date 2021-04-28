@@ -13,14 +13,14 @@ const isPrime = (number) => {
   }
   return true;
 };
-const prime = () => {
-  const createData = () => {
-    const number = generateNumbers(10);
-    const question = number;
-    const answer = isPrime(question) ? 'yes' : 'no';
-    return [answer, question];
-  };
 
-  engine(condition, createData);
+const createData = () => {
+  const number = generateNumbers(10);
+  const question = number;
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [answer, question];
 };
+
+const prime = () => engine(condition, createData);
+
 export default prime;
