@@ -6,7 +6,7 @@ const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
-  for (let i = 2; i < number; i += 1) {
+  for (let i = 2; i < number / 2; i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -15,12 +15,11 @@ const isPrime = (number) => {
 };
 
 const createData = () => {
-  const number = generateNumbers(10);
+  const number = generateNumbers();
   const question = number;
   const answer = isPrime(question) ? 'yes' : 'no';
   return [answer, question];
 };
 
 const prime = () => engine(condition, createData);
-
 export default prime;

@@ -1,2 +1,2 @@
-const generateNumbers = (n) => Math.floor(Math.random() * n);
+const generateNumbers = () => Math.floor(Math.random() * 10);
 export default generateNumbers;

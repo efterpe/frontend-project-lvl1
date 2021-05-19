@@ -3,7 +3,7 @@ import generateNumbers from '../generator.js';
 
 const condition = 'What number is missing in the progression?';
 
-const GameData = () => {
+const createNumber = () => {
   const firstnumber = generateNumbers(10);
   const step = generateNumbers(10) + 1;
   const hide = generateNumbers(9);
@@ -19,6 +19,6 @@ const GameData = () => {
   const question = numbers;
   return [answer, question];
 };
-const progression = () => engine(condition, GameData);
+const progression = () => engine(condition, createNumber);
 
 export default progression;
