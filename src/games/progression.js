@@ -3,15 +3,14 @@ import generateNumbers from '../generator.js';
 
 const condition = 'What number is missing in the progression?';
 
-const createNumber = () => {
-  const firstnumber = generateNumbers(10);
-  const step = generateNumbers(10) + 1;
-  const hide = generateNumbers(9);
-  let numbers = [firstnumber];
-  let n = 0;
-  while (n < 9) {
-    numbers.push(numbers[n] + step);
-    n += 1;
+const createNumbers = () => {
+  const firstnumber = generateNumbers();
+  const step = generateNumbers() + 1;
+  const hide = generateNumbers();
+  let numbers = [];
+
+  for (let i = 1; i <= 10; i += 1) {
+    numbers.push(firstnumber + (step * i));
   }
   const answer = String(numbers[hide]);
   numbers[hide] = '..';
@@ -19,6 +18,6 @@ const createNumber = () => {
   const question = numbers;
   return [answer, question];
 };
-const progression = () => engine(condition, createNumber);
+const progression = () => engine(condition, createNumbers);
 
 export default progression;
