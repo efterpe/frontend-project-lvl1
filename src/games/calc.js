@@ -10,14 +10,16 @@ const calculateNumbers = (number1, number2, operation) => {
       return number1 - number2;
     case '*':
       return number1 * number2;
-  };
+    default:
+      break;
+  }
 };
 const createData = () => {
   const number1 = generateNumbers();
   const number2 = generateNumbers();
   const operations = ['+', '-', '*'];
   const numberOfOperation = 3;
-  const index = generateNumbers(numberOfOperation);
+  const index = Math.floor(Math.random() * numberOfOperation);
   const operation = operations[index];
   const question = `${number1} ${operation} ${number2}`;
   const answer = String(calculateNumbers(number1, number2, operation));
