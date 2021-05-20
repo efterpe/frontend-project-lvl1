@@ -5,10 +5,11 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-Frontend-project-lvl1
+ Frontend-project-lvl1
+ ========================
     Консольное приложение с мини-играми "Brain-Games". 
-    
-    Run 
+Run 
+-------------------------
 
     $ brain-games
 
