@@ -11,7 +11,7 @@ const calculateNumbers = (number1, number2, operation) => {
     case '*':
       return number1 * number2;
     default:
-      return new Error(`Error: '${operation}'!`);
+      return new Error(`incorrect values '$${number1} ${operation} ${number2}'!`);
   }
 };
 const createData = () => {
