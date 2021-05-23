@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generator.js';
+import generateNumbers from '../generateNumbers.js';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (number) => number % 2 === 0;

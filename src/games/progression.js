@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generator.js';
+import generateNumbers from '../generateNumbers.js';
 
 const condition = 'What number is missing in the progression?';
 
