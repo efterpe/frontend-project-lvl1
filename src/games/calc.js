@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generator.js';
+import generateNumbers from '../generateNumbers.js';
 
 const condition = 'What is the result of the expression?';
 const calculateNumbers = (number1, number2, operation) => {
@@ -15,8 +15,8 @@ const calculateNumbers = (number1, number2, operation) => {
   }
 };
 const createData = () => {
-  const number1 = generateNumbers();
-  const number2 = generateNumbers();
+  const number1 = generateNumbers(1, 100);
+  const number2 = generateNumbers(1, 100);
   const operations = ['+', '-', '*'];
   const numberOfOperation = 3;
   const index = Math.floor(Math.random() * numberOfOperation);

@@ -1,5 +1,2 @@
-const generateNumbers = (min, max) => {
-    const r = min + Math.random() * (max + 1 - min);
-    return Math.floor(r);
-};
+const generateNumbers = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 export default generateNumbers;

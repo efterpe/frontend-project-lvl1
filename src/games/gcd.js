@@ -15,8 +15,8 @@ const gcd = (n1, n2) => {
   return (number2 + number1);
 };
 const createData = () => {
-  const number1 = generateNumbers();
-  const number2 = generateNumbers();
+  const number1 = generateNumbers(1, 100);
+  const number2 = generateNumbers(1, 100);
   const question = `${number1} ${number2}`;
   const answer = String(gcd(number1, number2));
   return [answer, question];

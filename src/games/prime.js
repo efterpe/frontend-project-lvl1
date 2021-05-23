@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generator.js';
+import generateNumbers from '../generateNumbers.js';
 
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
@@ -15,7 +15,7 @@ const isPrime = (number) => {
 };
 
 const createData = () => {
-  const number = generateNumbers();
+  const number = generateNumbers(1, 100);
   const question = number;
   const answer = isPrime(question) ? 'yes' : 'no';
   return [answer, question];
