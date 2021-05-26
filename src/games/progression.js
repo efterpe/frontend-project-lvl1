@@ -6,7 +6,7 @@ const condition = 'What number is missing in the progression?';
 const createNumbers = () => {
   const firstnumber = generateNumbers(0, 100);
   const step = generateNumbers(1, 10);
-  const hide = generateNumbers(1, 10);
+  const hide = generateNumbers(1, 100);
   let numbers = [];
 
   for (let i = 1; i <= 10; i += 1) {
