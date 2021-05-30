@@ -18,7 +18,7 @@ const createData = () => {
   const number1 = generateNumber(1, 100);
   const number2 = generateNumber(1, 100);
   const operations = ['+', '-', '*'];
-  const numberOfOperation = operations.length;
+  const numberOfOperation = operations.length - 1;
   const index = generateNumber(0, numberOfOperation);
   const operation = operations[index];
   const question = `${number1} ${operation} ${number2}`;
