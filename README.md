@@ -3,9 +3,9 @@
 
 [![linter](https://github.com/efterpe/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)](https://github.com/efterpe/frontend-project-lvl1/actions/workflows/linter.yml)
 
-<a href="https://github.com/efterpe/frontend-project-lvl1"><img src="https://codeclimate.com/github/efterpe/frontend-project-lvl1"/></a>
- 
- 
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/efterpe/frontend-project-lvl1)
+
+
  Frontend-project-lvl1
  ========================
     Консольное приложение с мини-играми "Brain-Games". 
