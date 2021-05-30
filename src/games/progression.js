@@ -1,12 +1,12 @@
 import engine from '../index.js';
-import generateNumbers from '../generateNumbers.js';
+import generateNumber from '../generateNumbers.js';
 
 const condition = 'What number is missing in the progression?';
 
 const createNumbers = () => {
-  const firstnumber = generateNumbers(1, 100);
-  const step = generateNumbers(1, 10);
-  const hide = generateNumbers(0, 10);
+  const firstnumber = generateNumber(1, 100);
+  const step = generateNumber(1, 10);
+  const hide = generateNumber(0, 10);
   let numbers = [];
 
   for (let i = 0; i <= 10; i += 1) {

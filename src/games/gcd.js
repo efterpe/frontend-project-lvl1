@@ -1,5 +1,5 @@
 import engine from '../index.js';
-import generateNumbers from '../generateNumbers.js';
+import generateNumber from '../generateNumbers.js';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 const gcd = (n1, n2) => {
@@ -15,8 +15,8 @@ const gcd = (n1, n2) => {
   return (number2 + number1);
 };
 const createData = () => {
-  const number1 = generateNumbers(1, 100);
-  const number2 = generateNumbers(1, 100);
+  const number1 = generateNumber(1, 100);
+  const number2 = generateNumber(1, 100);
   const question = `${number1} ${number2}`;
   const answer = String(gcd(number1, number2));
   return [answer, question];
